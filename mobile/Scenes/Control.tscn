@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/InputHandler.gd" type="Script" id=1]
+
+[node name="InputHandler" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 1 )
+host = "MSI"
+port = 4242
+deadzone = 100
+panSens = 1.5
+panningBound = 0.8
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true

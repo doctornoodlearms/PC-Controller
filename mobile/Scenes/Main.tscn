@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Connect.gd" type="Script" id=1]
+[ext_resource path="res://Themes/Main.tres" type="Theme" id=2]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+ratio = 2.5
+stretch_mode = 0
+
+[node name="Vbox" type="VBoxContainer" parent="AspectRatioContainer"]
+margin_top = 95.2
+margin_right = 1024.0
+margin_bottom = 504.8
+
+[node name="Address" type="HBoxContainer" parent="AspectRatioContainer/Vbox"]
+margin_top = 60.0
+margin_right = 1024.0
+margin_bottom = 142.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_constants/separation = 20
+
+[node name="HostName" type="LineEdit" parent="AspectRatioContainer/Vbox/Address"]
+unique_name_in_owner = true
+visible = false
+margin_right = 502.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+align = 1
+placeholder_text = "Host Name"
+
+[node name="IP" type="LineEdit" parent="AspectRatioContainer/Vbox/Address"]
+unique_name_in_owner = true
+margin_right = 1024.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+align = 1
+placeholder_text = "IP Address"
+
+[node name="Connect" type="Button" parent="AspectRatioContainer/Vbox"]
+margin_top = 268.0
+margin_right = 1024.0
+margin_bottom = 346.0
+size_flags_horizontal = 5
+size_flags_vertical = 6
+text = "Connect"
+script = ExtResource( 1 )
