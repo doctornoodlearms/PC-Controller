@@ -93,7 +93,7 @@ def com_MoveMouse(args=[0,0]):
 
     currentPos = pyautogui.position()
     newPos = (round(float(args[0]) + currentPos[0]), round(float(args[1]) + currentPos[1]))
-    pyautogui.moveTo(currentPos[0], currentPos[1])
+    pyautogui.moveTo(newPos[0], newPos[1])
 
 def com_MouseLeftClick(args=[]):
 
